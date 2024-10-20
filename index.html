@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BeerMap.io - Explore Community in Austin, Texas.">
+    <title>BeerMap.io - Explore Community</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <button class="drawer-toggle" aria-controls="left-drawer" aria-expanded="false" aria-label="Toggle filters">☰</button>
+        <h1>BeerMap.io</h1>
+        <button class="drawer-toggle" aria-controls="right-drawer" aria-expanded="false" aria-label="Toggle venue details">ℹ</button>
+    </header>
+
+    <nav id="left-drawer" class="drawer" aria-expanded="false">
+        <div class="drawer-header">
+            <h2>Filter Venues</h2>
+            <button class="drawer-toggle" aria-controls="left-drawer" aria-label="Close filters">✕</button>
+        </div>
+        <div class="drawer-content">
+            <form id="filter-form">
+                <label for="venue-type">Venue Type:</label>
+                <select id="venue-type">
+                    <option value="all">All</option>
+                    <option value="brewery">Brewery</option>
+                    <option value="taproom">Taproom</option>
+                    <option value="community-resource">Community Resource</option>
+                </select>
+                <button type="button" id="apply-filters">Apply Filters</button>
+            </form>
+        </div>
+    </nav>
+
+    <main>
+        <div id="map"></div>
+    </main>
+
+    <nav id="right-drawer" class="drawer" aria-expanded="false">
+        <div class="drawer-header">
+            <h2>Venue Details</h2>
+            <button class="drawer-toggle" aria-controls="right-drawer" aria-label="Close venue details">✕</button>
+        </div>
+        <div class="drawer-content" id="venue-details"></div>
+    </nav>
+
+    <nav id="bottom-drawer" class="drawer open" aria-expanded="true">
+        <button class="drawer-toggle" aria-controls="bottom-drawer" aria-label="Toggle footer">▼</button>
+        <div class="drawer-content" id="footer-content">
+            <p>Explore Community</p>
+            <p>&copy; 2024 BeerMap.io - Beer Nerd LLC</p>
+        </div>
+    </nav>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>

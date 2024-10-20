@@ -1,0 +1,21 @@
+{
+  "name": "BeerMap.io",
+  "short_name": "BeerMap",
+  "description": "Explore Austin's breweries, taprooms, and community resources",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#28282B",
+  "theme_color": "#a9a42c",
+  "icons": [
+    {
+      "src": "img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

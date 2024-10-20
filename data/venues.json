@@ -1,0 +1,295 @@
+{
+  "venues": [
+    {
+      "name": "Austin Beerworks",
+      "type": "brewery",
+      "lat": 30.3807,
+      "lng": -97.7199,
+      "address": "3001 Industrial Terrace, Austin, TX 78758",
+      "description": "Craft brewery with a spacious taproom and outdoor beer garden.",
+      "website": "https://austinbeerworks.com",
+      "phone": "512-821-2494",
+      "image": "https://example.com/path-to-austin-beerworks-image.jpg"
+    },
+    {
+      "name": "Jester King Brewery",
+      "type": "brewery",
+      "lat": 30.2324,
+      "lng": -98.0008,
+      "address": "13187 Fitzhugh Rd, Austin, TX 78736",
+      "description": "Farmhouse brewery specializing in wild ales and spontaneous fermentations.",
+      "website": "https://jesterkingbrewery.com",
+      "phone": "512-537-5100"
+    },
+    {
+      "name": "Live Oak Brewing Company",
+      "type": "brewery",
+      "lat": 30.1967,
+      "lng": -97.6671,
+      "address": "1615 Crozier Ln, Del Valle, TX 78617",
+      "description": "Traditional German-style brewery with a beautiful biergarten.",
+      "website": "https://liveoakbrewing.com",
+      "phone": "512-385-2299"
+    },
+    {
+      "name": "Meanwhile Brewing Co.",
+      "type": "brewery",
+      "lat": 30.2052,
+      "lng": -97.7347,
+      "address": "3901 Promontory Point Dr, Austin, TX 78744",
+      "description": "Brewery and taproom with a large outdoor space and food trucks.",
+      "website": "https://meanwhilebeer.com",
+      "phone": "512-308-3659"
+    },
+    {
+      "name": "Zilker Brewing Company",
+      "type": "brewery",
+      "lat": 30.2614,
+      "lng": -97.7273,
+      "address": "1701 E 6th St, Austin, TX 78702",
+      "description": "Urban brewery in East Austin with a taproom and patio.",
+      "website": "https://zilkerbeer.com",
+      "phone": "512-712-5590"
+    },
+    {
+      "name": "The ABGB (Austin Beer Garden Brewing Co.)",
+      "type": "brewery",
+      "lat": 30.2456,
+      "lng": -97.7644,
+      "address": "1305 W Oltorf St, Austin, TX 78704",
+      "description": "Brewery and pizza joint with live music and a large beer garden.",
+      "website": "https://theabgb.com",
+      "phone": "512-298-2242"
+    },
+    {
+      "name": "Hops & Grain Brewing",
+      "type": "brewery",
+      "lat": 30.2597,
+      "lng": -97.7172,
+      "address": "507 Calles St #101, Austin, TX 78702",
+      "description": "East Austin brewery known for their sustainable practices and great beers.",
+      "website": "https://www.hopsandgrain.com",
+      "phone": "512-914-2467"
+    },
+    {
+      "name": "St. Elmo Brewing Company",
+      "type": "brewery",
+      "lat": 30.2273,
+      "lng": -97.7689,
+      "address": "440 E St Elmo Rd G-2, Austin, TX 78745",
+      "description": "South Austin brewery with a taproom and regular food truck.",
+      "website": "https://www.stelmobrewing.com",
+      "phone": "737-300-1965"
+    },
+    {
+      "name": "Lazarus Brewing Co.",
+      "type": "brewery",
+      "lat": 30.2613,
+      "lng": -97.7242,
+      "address": "1902 E 6th St, Austin, TX 78702",
+      "description": "East Austin brewery with a coffee shop and tacos.",
+      "website": "https://www.lazarusbrewing.com",
+      "phone": "512-394-7620"
+    },
+    {
+      "name": "Pinthouse Pizza",
+      "type": "brewery",
+      "lat": 30.3401,
+      "lng": -97.7392,
+      "address": "4729 Burnet Rd, Austin, TX 78756",
+      "description": "Brewpub known for their IPAs and delicious pizzas.",
+      "website": "https://www.pinthousepizza.com",
+      "phone": "512-436-9605"
+    },
+    {
+      "name": "Austin Public Library - Central",
+      "type": "community-resource",
+      "lat": 30.2716,
+      "lng": -97.7453,
+      "address": "710 W César Chávez St, Austin, TX 78701",
+      "description": "Central library offering books, digital resources, and community programs.",
+      "website": "https://library.austintexas.gov",
+      "phone": "512-974-7400"
+    },
+    {
+      "name": "Austin Taproom",
+      "type": "taproom",
+      "lat": 30.2675,
+      "lng": -97.7440,
+      "address": "456 Taproom St, Austin, TX",
+      "description": "A chill taproom with a wide selection of craft beers.",
+      "website": "https://austintaproom.com",
+      "phone": "512-987-6543"
+    },
+    {
+      "name": "Austin Bottle Shop",
+      "type": "bottle-shop",
+      "lat": 30.2680,
+      "lng": -97.7425,
+      "address": "789 Bottle St, Austin, TX",
+      "description": "Find the best local craft beers at this bottle shop.",
+      "website": "https://austinbottleshop.com",
+      "phone": "512-555-1234"
+    },
+    {
+      "name": "Austin Eats",
+      "type": "restaurant",
+      "lat": 30.2690,
+      "lng": -97.7435,
+      "address": "101 Restaurant St, Austin, TX",
+      "description": "A restaurant with a great beer pairing menu.",
+      "website": "https://austineats.com",
+      "phone": "512-111-2222"
+    },
+    {
+      "name": "Austin Bar",
+      "type": "bar",
+      "lat": 30.2700,
+      "lng": -97.7410,
+      "address": "202 Bar St, Austin, TX",
+      "description": "A bar that serves local craft beers and cocktails.",
+      "website": "https://austinbar.com",
+      "phone": "512-333-4444"
+    },
+    {
+      "name": "Austin Comedy Club",
+      "type": "comedy-club",
+      "lat": 30.2710,
+      "lng": -97.7400,
+      "address": "303 Comedy St, Austin, TX",
+      "description": "A comedy club with craft beers on tap.",
+      "website": "https://austincomedyclub.com",
+      "phone": "512-555-6666"
+    },
+    {
+      "name": "Holdout Brewing",
+      "type": "brewery",
+      "lat": 30.2711,
+      "lng": -97.7492,
+      "address": "1208 W 4th St, Austin, TX 78703",
+      "description": "Neighborhood brewery with a variety of craft beers and a spacious patio.",
+      "website": "https://www.holdoutbrewing.com",
+      "phone": "512-305-3670"
+    },
+    {
+      "name": "Central Machine Works",
+      "type": "brewery",
+      "lat": 30.2576,
+      "lng": -97.7143,
+      "address": "4824 E Cesar Chavez St, Austin, TX 78702",
+      "description": "Brewery and beer hall in a renovated machine shop with a large outdoor area.",
+      "website": "https://www.cmwbrewery.com",
+      "phone": "512-385-3287"
+    },
+    {
+      "name": "Southern Heights Brewing Co",
+      "type": "brewery",
+      "lat": 30.3199,
+      "lng": -97.7040,
+      "address": "6014 Techni Center Dr, Austin, TX 78721",
+      "description": "Craft brewery known for their IPAs and welcoming taproom.",
+      "website": "https://www.southernheightsbrewing.com",
+      "phone": "512-358-4780"
+    },
+    {
+      "name": "Oddwood Brewing",
+      "type": "brewery",
+      "lat": 30.3199,
+      "lng": -97.7148,
+      "address": "3108 Manor Rd, Austin, TX 78723",
+      "description": "Neighborhood brewery specializing in mixed-culture fermentation and wood-aged beers.",
+      "website": "https://www.oddwoodales.com",
+      "phone": "512-220-0612"
+    },
+    {
+      "name": "Adelbert's Brewery",
+      "type": "brewery",
+      "lat": 30.3807,
+      "lng": -97.7199,
+      "address": "2314 Rutland Dr #100, Austin, TX 78758",
+      "description": "Craft brewery focusing on Belgian-style ales with a taproom and beer garden.",
+      "website": "https://adelbertsbeer.com",
+      "phone": "512-662-1462"
+    },
+    {
+      "name": "Circle Brewing Company",
+      "type": "brewery",
+      "lat": 30.3932,
+      "lng": -97.7250,
+      "address": "2340 W Braker Ln STE B, Austin, TX 78758",
+      "description": "Craft brewery with a focus on traditional brewing techniques and innovative flavors.",
+      "website": "https://circlebrewing.com",
+      "phone": "512-243-7054"
+    },
+    {
+      "name": "4th Tap Brewing Co-op",
+      "type": "brewery",
+      "lat": 30.3808,
+      "lng": -97.7194,
+      "address": "10615 Metric Blvd, Austin, TX 78758",
+      "description": "Worker-owned brewery cooperative with a diverse range of craft beers.",
+      "website": "https://4thtap.coop",
+      "phone": "512-904-9817"
+    },
+    {
+      "name": "Celis Brewery",
+      "type": "brewery",
+      "lat": 30.3821,
+      "lng": -97.7199,
+      "address": "10001 Metric Blvd, Austin, TX 78758",
+      "description": "Revived iconic Austin brewery known for their Belgian-style witbier.",
+      "website": "https://www.celisbeers.com",
+      "phone": "512-524-2377"
+    },
+    {
+      "name": "(512) Brewing Company",
+      "type": "brewery",
+      "lat": 30.2273,
+      "lng": -97.7689,
+      "address": "407 Radam Ln, Austin, TX 78745",
+      "description": "Local craft brewery known for their Pecan Porter and other innovative beers.",
+      "website": "https://512brewing.com",
+      "phone": "512-707-2337"
+    },
+    {
+      "name": "Independence Brewing",
+      "type": "brewery",
+      "lat": 30.2170,
+      "lng": -97.7561,
+      "address": "3913 Todd Ln #607, Austin, TX 78744",
+      "description": "Craft brewery offering a wide range of beers, from IPAs to stouts.",
+      "website": "https://independencebrewing.com",
+      "phone": "512-707-0099"
+    },
+    {
+      "name": "Lazarus Brewing Co. - Airport",
+      "type": "brewery",
+      "lat": 30.2556,
+      "lng": -97.7141,
+      "address": "4803 Airport Blvd, Austin, TX 78751",
+      "description": "Second location of Lazarus Brewing, offering craft beers and coffee.",
+      "website": "https://www.lazarusbrewing.com",
+      "phone": "512-394-7620"
+    },
+    {
+      "name": "Blue Owl Brewing",
+      "type": "brewery",
+      "lat": 30.2613,
+      "lng": -97.7239,
+      "address": "2400 E Cesar Chavez St #300, Austin, TX 78702",
+      "description": "Specializing in sour-mashed beers with a unique twist on traditional styles.",
+      "website": "https://blueowlbrewing.com",
+      "phone": "512-593-1262"
+    },
+    {
+      "name": "Fast Friends Beer Co.",
+      "type": "brewery",
+      "lat": 30.2273,
+      "lng": -97.7689,
+      "address": "507 Pressler St, Austin, TX 78703",
+      "description": "Craft brewery with a focus on lagers and a dog-friendly patio.",
+      "website": "https://fastfriendsbeer.com",
+      "phone": "512-813-3233"
+    }
+  ]
+}

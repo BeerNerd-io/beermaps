@@ -1,0 +1,275 @@
+:root {
+    --primary-color: #a9a42c;
+    --secondary-color: #28282B;
+    --text-color: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+    height: calc(100vh - 120px); /* Adjust for header and footer */
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.drawer {
+    position: fixed;
+    background-color: var(--secondary-color);
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+#left-drawer, #right-drawer {
+    top: 0;
+    height: 100%;
+    width: 300px;
+    max-width: 80vw;
+}
+
+#left-drawer {
+    left: -300px;
+    transition: left 0.3s ease-in-out;
+}
+
+#left-drawer.open {
+    left: 0;
+}
+
+#right-drawer {
+    right: -300px;
+    transition: right 0.3s ease-in-out;
+}
+
+#right-drawer.open {
+    right: 0;
+}
+
+#bottom-drawer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Height when closed */
+    transform: translateY(calc(100% - 30px)); /* Show only the toggle button when closed */
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom-drawer.open {
+    transform: translateY(0);
+    height: 80px; /* Increased height when open */
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.drawer-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.drawer.open {
+    transform: translateX(0) !important; /* Add !important */
+}
+
+#left-drawer.open {
+    left: 0;
+}
+
+#right-drawer.open {
+    right: 0;
+}
+
+#bottom-drawer.open {
+    bottom: 0;
+}
+
+.drawer-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.drawer-toggle:hover, .drawer-toggle:focus {
+    transform: scale(1.1);
+}
+
+.drawer-toggle:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: 2px;
+}
+
+#footer-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+#footer-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, select, button {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .drawer {
+        width: 80%;
+    }
+}
+
+#bottom-drawer .drawer-toggle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#bottom-drawer .drawer-content {
+    padding-top: 30px; /* Make space for the toggle button */
+}
+
+#bottom-drawer .drawer-toggle {
+    width: 100%;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.directions-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.directions-button:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+.myDivIcon {
+    background: none;
+    border: none;
+}
+
+.myDivIcon svg {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+}
+
+.leaflet-marker-icon {
+    transition: transform 0.3s ease;
+}
+
+.leaflet-marker-icon:hover {
+    transform: scale(1.2);
+    z-index: 1000 !important;
+}
+
+#right-drawer.open::before {
+    content: "OPEN";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
