@@ -24,16 +24,22 @@
             <button class="drawer-toggle" aria-controls="left-drawer" aria-label="Close filters">✕</button>
         </div>
         <div class="drawer-content">
-            <form id="filter-form">
-                <label for="venue-type">Venue Type:</label>
-                <select id="venue-type">
-                    <option value="all">All</option>
-                    <option value="brewery">Brewery</option>
-                    <option value="taproom">Taproom</option>
-                    <option value="community-resource">Community Resource</option>
-                </select>
-                <button type="button" id="apply-filters">Apply Filters</button>
-            </form>
+            <div id="filter-form" class="futuristic-filter">
+                <h3>Filter Venues</h3>
+                <div class="filter-options">
+                    <button class="filter-button active" data-type="all">All</button>
+                    <button class="filter-button" data-type="brewery">Brewery</button>
+                    <button class="filter-button" data-type="taproom">Taproom</button>
+                    <button class="filter-button" data-type="bottle-shop">Bottle Shop</button>
+                    <button class="filter-button" data-type="restaurant">Restaurant</button>
+                    <button class="filter-button" data-type="bar">Bar</button>
+                    <button class="filter-button" data-type="comedy-club">Comedy Club</button>
+                    <button class="filter-button" data-type="community-resource">Community Resource</button>
+                </div>
+            </div>
+            <div class="sponsor-image">
+                <img src="cbtsponsor.png" alt="City Brew Tours Sponsor">
+            </div>
         </div>
     </nav>
 
@@ -60,5 +66,6 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="js/map.js"></script>
     <script src="js/filter.js"></script>
+    <script src="js/venue-details.js"></script>
 </body>
 </html>

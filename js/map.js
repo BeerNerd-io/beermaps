@@ -1,15 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize the map
-    const map = L.map('map').setView([30.2672, -97.7431], 13); // Austin, TX coordinates
+    window.map = L.map('map').setView([30.2672, -97.7431], 13); // Austin, TX coordinates
 
+    // Use OpenStreetMap Carto (Standard) tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(window.map);
 
     // Define custom icons for each venue type
     const icons = {
         brewery: L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
             iconSize: [25, 41],
             iconAnchor: [12, 41],
@@ -66,12 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     };
 
+    // Add city name label
+    const CityLabel = L.Control.extend({
+        onAdd: function(map) {
+            const label = L.DomUtil.create('div', 'city-label');
+            label.innerHTML = 'AUSTIN';
+            return label;
+        }
+    });
+
+    new CityLabel({ position: 'topleft' }).addTo(window.map);
+
+    // Initialize global markers array
+    window.markers = [];
+
     // Fetch venue data and add markers
     fetch('data/venues.json')
         .then(response => response.json())
         .then(data => {
             data.venues.forEach(venue => {
-                const marker = L.marker([venue.lat, venue.lng], {icon: icons[venue.type] || L.Icon.Default()}).addTo(map);
+                const icon = icons[venue.type] || L.Icon.Default();
+                icon.options.venueType = venue.type;  // Store venue type in icon options
+                const marker = L.marker([venue.lat, venue.lng], {icon: icon});
                 
                 // Create popup content
                 const popupContent = `
@@ -88,12 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Marker clicked');
                     openRightDrawer(venue);
                 });
+
+                // Add marker to global array
+                window.markers.push(marker);
             });
+
+            // Add all markers to the map initially
+            window.markers.forEach(marker => marker.addTo(window.map));
+
+            // Call filterVenues with initial 'all' filter
+            if (typeof window.filterVenues === 'function') {
+                window.filterVenues(new Set(['all']));
+            }
         })
         .catch(error => console.error('Error loading venue data:', error));
-
-    // Make map object globally accessible
-    window.map = map;
 
     // Add event listeners for drawer toggles
     const toggleButtons = document.querySelectorAll('.drawer-toggle');
@@ -125,7 +151,7 @@ function showVenueDetails(venue) {
     console.log('showVenueDetails called with venue:', venue);
     const detailsContainer = document.getElementById('venue-details');
     detailsContainer.innerHTML = `
-        <img src="${venue.image}" alt="${venue.name}" style="width: 100%; height: auto;">
+        ${venue.image ? `<img src="${venue.image}" alt="${venue.name}" style="width: 100%; height: auto;">` : ''}
         <h3>${venue.name}</h3>
         <p><strong>Type:</strong> ${venue.type}</p>
         <p><strong>Address:</strong> ${venue.address}</p>

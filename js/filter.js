@@ -1,24 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const applyFiltersButton = document.getElementById('apply-filters');
-    if (applyFiltersButton) {
-        applyFiltersButton.addEventListener('click', () => {
-            const selectedType = document.getElementById('venue-type').value;
-            filterVenues(selectedType);
+    const filterButtons = document.querySelectorAll('.filter-button');
+    let activeFilters = new Set(['all']);
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const selectedType = button.getAttribute('data-type');
+
+            if (selectedType === 'all') {
+                activeFilters.clear();
+                activeFilters.add('all');
+                filterButtons.forEach(btn => btn.classList.toggle('active', btn === button));
+            } else {
+                activeFilters.delete('all');
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
+                    activeFilters.add(selectedType);
+                } else {
+                    activeFilters.delete(selectedType);
+                }
+                if (activeFilters.size === 0) {
+                    activeFilters.add('all');
+                    filterButtons[0].classList.add('active');
+                }
+            }
+
+            filterVenues(activeFilters);
         });
-    }
+    });
 });
 
-function filterVenues(type) {
-    map.eachLayer(layer => {
-        if (layer instanceof L.Marker) {
-            const venueType = layer.getPopup().getContent().split('<br>')[1].trim().toLowerCase();
-            if (type === 'all' || venueType === type.toLowerCase()) {
-                layer.addTo(map);
+function filterVenues(activeFilters) {
+    if (window.map && window.markers) {
+        window.markers.forEach(marker => {
+            const venueType = marker.options.icon.options.venueType;
+            if (activeFilters.has('all') || activeFilters.has(venueType)) {
+                marker.addTo(window.map);
             } else {
-                map.removeLayer(layer);
+                window.map.removeLayer(marker);
             }
-        }
-    });
+        });
+    }
 }
+
+// Make filterVenues function globally accessible
+window.filterVenues = filterVenues;
 
 // Remove any other event listeners that might be interfering with marker clicks
