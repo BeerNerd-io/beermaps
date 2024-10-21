@@ -363,6 +363,7 @@ footer {
 .sponsor-image img {
     max-width: 100%;
     height: auto;
+    max-height: 100px; /* Adjust this value as needed */
 }
 
 /* Ensure the sponsor image is visible above the footer */
